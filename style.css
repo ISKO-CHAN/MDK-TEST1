@@ -1,3 +1,4 @@
+/* Основные переменные */
 :root {
     --primary-color: #00ffff;
     --secondary-color: #ff0080;
@@ -13,6 +14,7 @@
     --card-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
 }
 
+/* Сброс стилей */
 * {
     margin: 0;
     padding: 0;
@@ -51,6 +53,11 @@ body {
     padding: 1rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* ДОБАВЛЕНО для смещения логотипа вниз */
+.nav-logo {
+    margin-top: 5px; 
 }
 
 .nav-logo h1 {
@@ -246,15 +253,18 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none; 
-    display: inline-block;
-    text-align: center;
+    
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    line-height: 1; 
 }
 
 .btn-primary {
     background: var(--gradient-primary);
     color: var(--bg-dark);
     box-shadow: var(--card-shadow);
-    border: none; 
+    border: none;
 }
 
 .btn-primary:hover {
@@ -732,7 +742,6 @@ body {
     }
 }
 
-/* Дополнительные анимации */
 @keyframes pulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.5; }
@@ -742,7 +751,6 @@ body {
     animation: pulse 1s infinite;
 }
 
-/* Скроллбар */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -758,4 +766,4 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary-color);
-}
+    }
